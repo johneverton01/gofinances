@@ -1,4 +1,9 @@
 import { Button } from './Button'
 import { Input } from './Input'
+import { TransactionTypeButton } from './TransactionTypeButton'
 
-export { Input, Button };
+export { 
+  Button, 
+  Input, 
+  TransactionTypeButton,
+}
