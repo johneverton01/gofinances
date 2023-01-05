@@ -15,7 +15,7 @@ export const Header = styled.View`
   align-items: center;
   justify-content: flex-end;
 
-  padding-bottom: 19px;
+  padding-bottom: 20px;
 `;
 
 export const Title = styled.Text`
@@ -38,4 +38,6 @@ export const Fields = styled.View``;
 export const TransactionType = styled.View`
   flex-direction: row;
   justify-content: space-between;
+
+  margin: 8px 0;
 `;
