@@ -117,7 +117,7 @@ def enableProguardInReleaseBuilds = (findProperty('android.enableProguardInRelea
  * give correct results when using with locales other than en-US.  Note that
  * this variant is about 6MiB larger per architecture than default.
  */
-def jscFlavor = 'org.webkit:android-jsc:+'
+def jscFlavor = 'org.webkit:android-jsc-intl:+'
 
 /**
  * Whether to enable the Hermes VM.
@@ -284,7 +284,7 @@ dependencies {
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";
     def frescoVersion = rootProject.ext.frescoVersion
-
+    
     // If your app supports Android versions before Ice Cream Sandwich (API level 14)
     if (isGifEnabled || isWebpEnabled) {
         implementation "com.facebook.fresco:fresco:${frescoVersion}"
