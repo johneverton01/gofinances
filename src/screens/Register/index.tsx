@@ -31,6 +31,7 @@ import {
   TransactionType,
 } from "./styles"
 import { Control, FieldValues } from 'react-hook-form/dist/types';
+import { useAuth } from '../../hooks/auth';
 
 interface FormDate {
   name: string
@@ -52,6 +53,8 @@ export function Register() {
   const [transactionType, setTransactionType] = useState("")
   const [isOpenCategoryModal, setIsOpenCategoryModal] = useState(false)
 
+  const { user } = useAuth()
+
   const [category, setCategory] = useState<Category>({
     key: "category",
     name: "Categoria",
@@ -59,7 +62,7 @@ export function Register() {
 
   const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 
-  const dataKey = '@gofinances:transactions';
+  const dataKey = `@gofinances:transactions_user:${user.id}`;
 
   const { 
     control, 
